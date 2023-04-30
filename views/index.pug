@@ -1,0 +1,72 @@
+doctype html
+html
+  head
+    title Continental dance class
+    style
+      include ../static/style.css
+  body
+    nav#navbar 
+        ul#navul 
+            li #[a(href="/") Home]
+            li #[a(href="/") About]
+            li #[a(href="/") Services]
+            li #[a(href="#conatct", id="NavContact") Contact Us]
+        hr
+    
+    section#IntroSection
+        | Continental Dance Class
+    hr
+
+    section#missionSection 
+        .missionHeading 
+            p Our Mission 
+        .cardsDiv 
+            .cards
+                h3 Dance perfection
+                .cardContent 
+                    img(src="../static/img1.png") 
+                    p This is the best dance academy of the universe
+            .cards 
+                h3 Dance the way you like 
+                .cardContent 
+                    img(src="../static/img2.png") 
+                    p This is the best dance academy of the universe
+            .cards 
+                h3 Expert teaching 
+                .cardContent 
+                    img(src="../static/img3.png") 
+                    p This is the best dance academy of the universe
+        hr
+
+    section#sponsorsSection 
+        .sponsorsHeading 
+            p Our Sponsors 
+        .sponsorsDiv 
+            img(src="../static/google.png", alt="")
+            img(src="../static/microsoft.png", alt="")
+            img(src="../static/hp.png", alt="")
+            img(src="../static/disney.png", alt="")
+        hr    
+
+    section#contact 
+        .contactHeading 
+            p Contact Us
+        form(method="POST" action="/submit")
+            .box
+                input(type="text", placeholder="Name", name="name") 
+            .box 
+                input(type="email", placeholder="Email", name="email")
+            .box 
+                input(type="number", placeholder="Phone", name="phone")
+            .box
+                input(type="text", placeholder="Message", name="message")
+            .button 
+                input(type="submit", id="submit", name="submit", value="Submit")
+        hr
+
+    footer#footer 
+        | copyright &#9426; Continental Dance Class | All rights reserved
+
+    script
+      include ../static/script.js
+    
